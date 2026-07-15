@@ -1,8 +1,5 @@
 // Specification Reference: Nisan & Schocken, MIT Press
 
-
-// File name: projects/1/Mux16.hdl
-
 /**
  * 16-bit multiplexor: 
  * for i = 0, ..., 15:

@@ -1,8 +1,5 @@
 // Specification Reference: Nisan & Schocken, MIT Press
 
-
-// File name: projects/1/And.hdl
-
 /**
  * Not gate:
  * if (in) out = 0, else out = 1

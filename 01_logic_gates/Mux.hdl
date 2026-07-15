@@ -1,8 +1,5 @@
 // Specification Reference: Nisan & Schocken, MIT Press
 
-
-// File name: projects/1/And.hdl
-
 /**
  * Multiplexor:
  * if (sel = 0) out = a, else out = b

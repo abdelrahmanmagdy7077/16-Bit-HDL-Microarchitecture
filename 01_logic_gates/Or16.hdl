@@ -1,8 +1,5 @@
 // Specification Reference: Nisan & Schocken, MIT Press
 
-
-// File name: projects/1/Or16.hdl
-
 /**
  * 16-bit Or gate:
  * for i = 0, ..., 15:
