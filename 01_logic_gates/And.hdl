@@ -1,0 +1,18 @@
+// Specification Reference: Nisan & Schocken, MIT Press
+
+
+// File name: projects/1/And.hdl
+
+/**
+ * And gate:
+ * if (a and b) out = 1, else out = 0 
+ */
+CHIP And {
+    IN a, b;
+    OUT out;
+    
+    PARTS:
+    Nand(a=a , b=b , out=out1 );
+    Nand(a=out1 , b=out1 , out=out );
+    
+}

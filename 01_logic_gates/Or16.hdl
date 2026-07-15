@@ -1,0 +1,71 @@
+// Specification Reference: Nisan & Schocken, MIT Press
+
+
+// File name: projects/1/Or16.hdl
+
+/**
+ * 16-bit Or gate:
+ * for i = 0, ..., 15:
+ * out[i] = a[i] Or b[i] 
+ */
+CHIP Or16 {
+    IN a[16], b[16];
+    OUT out[16];
+
+    PARTS:
+    
+    Nand(a=a[0],  b=a[0],  out=p0);
+    Nand(a=a[1],  b=a[1],  out=p1);
+    Nand(a=a[2],  b=a[2],  out=p2);
+    Nand(a=a[3],  b=a[3],  out=p3);
+    Nand(a=a[4],  b=a[4],  out=p4);
+    Nand(a=a[5],  b=a[5],  out=p5);
+    Nand(a=a[6],  b=a[6],  out=p6);
+    Nand(a=a[7],  b=a[7],  out=p7);
+    Nand(a=a[8],  b=a[8],  out=p8);
+    Nand(a=a[9],  b=a[9],  out=p9);
+    Nand(a=a[10], b=a[10], out=p10);
+    Nand(a=a[11], b=a[11], out=p11);
+    Nand(a=a[12], b=a[12], out=p12);
+    Nand(a=a[13], b=a[13], out=p13);
+    Nand(a=a[14], b=a[14], out=p14);
+    Nand(a=a[15], b=a[15], out=p15);
+
+    
+    Nand(a=b[0],  b=b[0],  out=z0);
+    Nand(a=b[1],  b=b[1],  out=z1);
+    Nand(a=b[2],  b=b[2],  out=z2);
+    Nand(a=b[3],  b=b[3],  out=z3);
+    Nand(a=b[4],  b=b[4],  out=z4);
+    Nand(a=b[5],  b=b[5],  out=z5);
+    Nand(a=b[6],  b=b[6],  out=z6);
+    Nand(a=b[7],  b=b[7],  out=z7);
+    Nand(a=b[8],  b=b[8],  out=z8);
+    Nand(a=b[9],  b=b[9],  out=z9);
+    Nand(a=b[10], b=b[10], out=z10);
+    Nand(a=b[11], b=b[11], out=z11);
+    Nand(a=b[12], b=b[12], out=z12);
+    Nand(a=b[13], b=b[13], out=z13);
+    Nand(a=b[14], b=b[14], out=z14);
+    Nand(a=b[15], b=b[15], out=z15);
+
+
+    Nand(a=p0,  b=z0,  out=out[0]);
+    Nand(a=p1,  b=z1,  out=out[1]);
+    Nand(a=p2,  b=z2,  out=out[2]);
+    Nand(a=p3,  b=z3,  out=out[3]);
+    Nand(a=p4,  b=z4,  out=out[4]);
+    Nand(a=p5,  b=z5,  out=out[5]);
+    Nand(a=p6,  b=z6,  out=out[6]);
+    Nand(a=p7,  b=z7,  out=out[7]);
+    Nand(a=p8,  b=z8,  out=out[8]);
+    Nand(a=p9,  b=z9,  out=out[9]);
+    Nand(a=p10, b=z10, out=out[10]);
+    Nand(a=p11, b=z11, out=out[11]);
+    Nand(a=p12, b=z12, out=out[12]);
+    Nand(a=p13, b=z13, out=out[13]);
+    Nand(a=p14, b=z14, out=out[14]);
+    Nand(a=p15, b=z15, out=out[15]);
+    
+
+}

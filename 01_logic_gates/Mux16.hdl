@@ -1,0 +1,70 @@
+// Specification Reference: Nisan & Schocken, MIT Press
+
+
+// File name: projects/1/Mux16.hdl
+
+/**
+ * 16-bit multiplexor: 
+ * for i = 0, ..., 15:
+ * if (sel = 0) out[i] = a[i], else out[i] = b[i]
+ */
+CHIP Mux16 {
+    IN a[16], b[16], sel;
+    OUT out[16];
+
+    PARTS:
+    
+    Nand(a=sel, b=sel, out=NotSel);
+
+    Nand(a=a[0],  b=NotSel, out=p0);
+    Nand(a=a[1],  b=NotSel, out=p1);
+    Nand(a=a[2],  b=NotSel, out=p2);
+    Nand(a=a[3],  b=NotSel, out=p3);
+    Nand(a=a[4],  b=NotSel, out=p4);
+    Nand(a=a[5],  b=NotSel, out=p5);
+    Nand(a=a[6],  b=NotSel, out=p6);
+    Nand(a=a[7],  b=NotSel, out=p7);
+    Nand(a=a[8],  b=NotSel, out=p8);
+    Nand(a=a[9],  b=NotSel, out=p9);
+    Nand(a=a[10], b=NotSel, out=p10);
+    Nand(a=a[11], b=NotSel, out=p11);
+    Nand(a=a[12], b=NotSel, out=p12);
+    Nand(a=a[13], b=NotSel, out=p13);
+    Nand(a=a[14], b=NotSel, out=p14);
+    Nand(a=a[15], b=NotSel, out=p15);
+
+    Nand(a=b[0],  b=sel,    out=z0);
+    Nand(a=b[1],  b=sel,    out=z1);
+    Nand(a=b[2],  b=sel,    out=z2);
+    Nand(a=b[3],  b=sel,    out=z3);
+    Nand(a=b[4],  b=sel,    out=z4);
+    Nand(a=b[5],  b=sel,    out=z5);
+    Nand(a=b[6],  b=sel,    out=z6);
+    Nand(a=b[7],  b=sel,    out=z7);
+    Nand(a=b[8],  b=sel,    out=z8);
+    Nand(a=b[9],  b=sel,    out=z9);
+    Nand(a=b[10], b=sel,    out=z10);
+    Nand(a=b[11], b=sel,    out=z11);
+    Nand(a=b[12], b=sel,    out=z12);
+    Nand(a=b[13], b=sel,    out=z13);
+    Nand(a=b[14], b=sel,    out=z14);
+    Nand(a=b[15], b=sel,    out=z15);
+
+    Nand(a=p0,  b=z0,  out=out[0]);
+    Nand(a=p1,  b=z1,  out=out[1]);
+    Nand(a=p2,  b=z2,  out=out[2]);
+    Nand(a=p3,  b=z3,  out=out[3]);
+    Nand(a=p4,  b=z4,  out=out[4]);
+    Nand(a=p5,  b=z5,  out=out[5]);
+    Nand(a=p6,  b=z6,  out=out[6]);
+    Nand(a=p7,  b=z7,  out=out[7]);
+    Nand(a=p8,  b=z8,  out=out[8]);
+    Nand(a=p9,  b=z9,  out=out[9]);
+    Nand(a=p10, b=z10, out=out[10]);
+    Nand(a=p11, b=z11, out=out[11]);
+    Nand(a=p12, b=z12, out=out[12]);
+    Nand(a=p13, b=z13, out=out[13]);
+    Nand(a=p14, b=z14, out=out[14]);
+    Nand(a=p15, b=z15, out=out[15]);
+
+}

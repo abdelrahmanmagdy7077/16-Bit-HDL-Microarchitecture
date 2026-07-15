@@ -1,0 +1,19 @@
+// Specification Reference: Nisan & Schocken, MIT Press
+
+
+// File name: projects/1/And.hdl
+
+/**
+ * Multiplexor:
+ * if (sel = 0) out = a, else out = b
+ */
+CHIP Mux {
+    IN a, b, sel;
+    OUT out;
+
+    PARTS:
+    Nand(a=a , b=p2 , out=p1 );
+    Nand(a=sel , b=sel , out=p2 );
+    Nand(a= b, b=sel , out=p3 );
+    Nand(a=p1 , b=p3 , out=out );
+}
