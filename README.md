@@ -37,20 +37,6 @@ Unlike standard Verilog or VHDL where you can use math shortcuts (like `+` or `-
 
 ---
 
-## Repository Structure
-
-```text
-├── 01_logic_gates/          # Basic logic gates, multiplexers, and multi-bit buses
-├── 02_arithmetic_unit/      # Adders and the 16-bit ALU
-├── 03_memory_hierarchy/     # Registers, RAM modules, and the Program Counter
-├── 04_cpu_architecture/     # The CPU and top-level computer chip
-├── 05_verification/         # Test scripts (.tst) and compare files (.cmp)
-└── docs/                    # Diagrams, control line notes, and pinouts
-
-```
-
----
-
 ## Verification and Testing
 
 Every chip in this repository was tested and verified using a Java-based Hardware Simulator. The testing checks:
