@@ -37,16 +37,6 @@ Unlike standard Verilog or VHDL where you can use math shortcuts (like `+` or `-
 
 ---
 
-## Verification and Testing
-
-Every chip in this repository was tested and verified using a Java-based Hardware Simulator. The testing checks:
-
-* **Logic Accuracy:** Using `.tst` scripts to verify that every combinational chip gives the exact expected output for all possible inputs.
-* **Timing & Memory:** Ensuring registers, RAM chips, and clock-cycle states hold data correctly without losing information or causing race conditions.
-* **CPU Behavior:** Running full instruction cycles to confirm proper branching, data routing, and execution timing against expected `.cmp` outputs.
-
----
-
 ## Specification Reference
 
 The hardware specifications, instruction set architecture (ISA), and HDL syntax used in this project are based on the computer engineering framework from the textbook *The Elements of Computing Systems* by Noam Nisan and Shimon Schocken (MIT Press).
