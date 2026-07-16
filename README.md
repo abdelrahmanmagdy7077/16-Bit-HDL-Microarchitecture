@@ -1,5 +1,11 @@
 # 16-Bit HDL Microarchitecture
 
+
+![Architecture](https://img.shields.io/badge/Architecture-16--Bit_RISC-blue?style=for-the-badge)
+![Language](https://img.shields.io/badge/Language-Structural_HDL-orange?style=for-the-badge)
+![Verification](https://img.shields.io/badge/Verification-100%25_Pass-success?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-lightgrey?style=for-the-badge)
+
 A complete 16-bit computer processor built from scratch using basic logic gates. This repository contains the Hardware Description Language (HDL) code, circuit designs, and test scripts used to build a working CPU, memory hierarchy, and top-level computer architecture from the ground up.
 
 ---
